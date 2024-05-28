@@ -1,16 +1,10 @@
 import "./App.css";
-import { useState } from "react";
+import Toggle from "./components/Toggle";
 
 function App() {
-  const [likeBtn, setLikeBtn] = useState(false);
-
-  const handleLike = () => {
-    setLikeBtn(!likeBtn);
-  };
-
   return (
     <>
-      <button onClick={handleLike}>{likeBtn ? "Unlike" : "Like"}</button>
+      <Toggle initialState={false} />
     </>
   );
 }
